@@ -1,0 +1,36 @@
+body {
+  font-family: Roboto;
+}
+.container {
+  border: 1px solid;
+  max-width: 500px;
+  margin: 10px;
+  padding: 10px;
+}
+h1 {
+  border-bottom: 1px solid;
+  padding-bottom: 20px;
+}
+input {
+  width: 400px;
+}
+button {
+  color: white;
+  background-color: green;
+}
+.bold {
+  font-weight: bold;
+}
+.stats {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 195px;
+  left: 300px;
+}
+.ids {
+  margin: 0px 10px;
+}
+.tasks {
+  margin: 0px 10px;
+}
