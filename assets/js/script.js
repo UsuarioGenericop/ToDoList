@@ -16,12 +16,15 @@ function getRandomInRange(min, max) {
 function recibirTexto() {
   console.log(input.value);
   let task = document.createElement("p");
-
+  //   let checkbox = document.createElement("input");
+  //   checkbox.type = "checkbox";
+  //   checkbox.style.width = "13px";
   task.innerHTML = input.value;
   tasks.appendChild(task);
   console.log(task);
   if (input.value != "") {
     console.log("Si hay");
+    // task.appendChild(checkbox);
     counter++;
     console.log(counter);
     total.innerHTML = `Total: ${counter}`;
