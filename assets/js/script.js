@@ -9,6 +9,9 @@ const ids = document.querySelector(".ids");
 const stats = document.querySelector(".stats");
 
 const total = document.querySelector("#total");
+
+const container = document.querySelector(".status");
+
 var counter = 0;
 function getRandomInRange(min, max) {
   return Math.random() * (max - min) + min;
@@ -16,21 +19,28 @@ function getRandomInRange(min, max) {
 function recibirTexto() {
   console.log(input.value);
   let task = document.createElement("p");
-  //   let checkbox = document.createElement("input");
-  //   checkbox.type = "checkbox";
-  //   checkbox.style.width = "13px";
   task.innerHTML = input.value;
   tasks.appendChild(task);
   console.log(task);
   if (input.value != "") {
     console.log("Si hay");
-    // task.appendChild(checkbox);
     counter++;
     console.log(counter);
     total.innerHTML = `Total: ${counter}`;
     let id = document.createElement("p");
     id.innerHTML = Math.round(getRandomInRange(1, 100));
     ids.appendChild(id);
+    let checkboxes = document.createElement("div");
+    checkboxes.className = "checkboxes";
+    container.appendChild(checkboxes);
+    let checkboxright = document.createElement("input");
+    checkboxright.type = "checkbox";
+    checkboxright.id = "right";
+    checkboxes.appendChild(checkboxright);
+    let checkboxwrong = document.createElement("input");
+    checkboxwrong.type = "checkbox";
+    checkboxwrong.id = "wrong";
+    checkboxes.appendChild(checkboxwrong);
   } else {
     console.log("No hay");
   }

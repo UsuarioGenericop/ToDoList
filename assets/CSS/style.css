@@ -47,6 +47,7 @@ button {
 .checkboxes {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 21.39px;
 }
 .checkboxes input {
   max-width: 13px;
