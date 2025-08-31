@@ -15,10 +15,10 @@
     <div class="container">
         <h1>ToDo List</h1>
         <p>Nueva tarea</p>
-        <input type="text">
+        <input type="text" maxlength="30">
         <button>Agregar</button>
-        <p id="total">Total:</p>
-        <p>Realizadas:</p>
+        <p id="total">Total: 0</p>
+        <p id="resultado">Realizadas: 0</p>
         <div class="stats">
             <div class="ids">
                 <p class="bold">Id</p>
@@ -34,8 +34,8 @@
                     <p class="bold">✗</p>
                 </div>
                 <div class="checkboxes">
-                    <input type="checkbox" id="right">
-                    <input type="checkbox" id="wrong">
+                    <input type="checkbox" class="right">
+                    <input type="checkbox" class="wrong">
                 </div>
             </div>
         </div>

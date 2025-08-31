@@ -6,6 +6,7 @@ body {
   max-width: 700px;
   margin: 10px;
   padding: 10px;
+  min-height: 200px;
 }
 h1 {
   border-bottom: 1px solid;
@@ -53,13 +54,13 @@ button {
   max-width: 13px;
 }
 
-#right {
+.right {
   border: 1px solid rgb(118, 118, 118);
 }
-#right:checked {
+.right:checked {
   accent-color: green;
 }
-#wrong {
+.wrong {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -69,15 +70,15 @@ button {
   border-radius: 3px;
   position: relative;
 }
-#wrong:hover {
+.wrong:hover {
   border-color: #4f4f4f;
 }
-#wrong:checked {
+.wrong:checked {
   background-color: red;
   border-color: red;
 }
 
-#wrong:checked::after {
+.wrong:checked::after {
   content: "✗";
   position: absolute;
   left: 1px;
