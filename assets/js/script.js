@@ -21,12 +21,6 @@ var counterResult = 0;
 function getRandomInRange(min, max) {
   return Math.random() * (max - min) + min;
 }
-function adjustContainerHeight() {
-  const baseHeight = 200;
-  const heightPerTask = 50;
-  const newHeight = baseHeight + heightPerTask;
-  container.style.minHeight = `${newHeight}px`;
-}
 function recibirTexto() {
   console.log(input.value);
   let task = document.createElement("p");
@@ -34,8 +28,6 @@ function recibirTexto() {
   tasks.appendChild(task);
   console.log(task);
   if (input.value != "") {
-    adjustContainerHeight();
-
     console.log("Nueva tarea agregada");
     counter++;
     console.log(counter);
@@ -75,14 +67,32 @@ function recibirTexto() {
           counter--;
           total.innerHTML = `Total: ${counter}`;
           console.log("Tarea eliminada");
+
+          // Adjust container height after deleting task
+          adjustContainerHeight();
         }, 100);
       }
     });
 
     checkboxes.appendChild(checkboxwrong);
+
+    // Adjust container height based on number of tasks
+    adjustContainerHeight();
   } else {
     console.log("No hay nueva tarea");
   }
+}
+
+// Function to adjust container height
+function adjustContainerHeight() {
+  const heightPerTask = 34; // Height per task in pixels
+  let newHeight = 250;
+
+  for (let i = 0; i < counter; i++) {
+    newHeight += heightPerTask;
+  }
+  console.log(newHeight);
+  container.style.height = `${newHeight}px`;
 }
 verificar.addEventListener("click", () => {
   recibirTexto();
